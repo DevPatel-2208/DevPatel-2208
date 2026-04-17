@@ -9,15 +9,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- AOS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="Style.css">
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem('portfolio-theme');
+          if (savedTheme === 'light') {
+            document.documentElement.classList.add('light-theme');
+          }
+        } catch (error) {}
+      })();
+    </script>
     
 </head>
 <body>
+<div class="scroll-progress-bar" id="scroll-progress-bar" aria-hidden="true"></div>
 <!-- Interactive Background & Glow -->
 <div id="particles-js"></div>
 <div class="cursor-glow" id="cursor-glow"></div>
@@ -66,6 +78,13 @@
           <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
+      <button class="theme-toggle ms-lg-3 mt-3 mt-lg-0" id="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+        <span class="theme-toggle-track">
+          <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+          <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+          <span class="theme-toggle-thumb"></span>
+        </span>
+      </button>
     </div>
   </div>
 </nav>
@@ -116,15 +135,16 @@
       <!-- Left Column -->
       <div class="col-lg-6 mb-4 mb-lg-0">
         <p class="about-text text-justify">
-          I'm a passionate <strong>BCA graduate</strong> with a strong interest in Full Stack Web Development. Skilled in <strong>C, C++, PHP, Java, HTML5, CSS, JavaScript, jQuery, Bootstrap</strong>, and <strong>ASP.NET (C#)</strong>, I’ve built multiple end-to-end web solutions that are dynamic, scalable, and mobile-responsive. 🚀
-        </p>
-        <p class="about-text text-justify">
-          I’ve completed <strong>5+ major projects</strong> — including <strong>2 in ASP.NET (C#)</strong> and others in <strong>PHP & MySQL</strong>. My final year project, <em>Sport Club Management System</em>, gave me real-world exposure to backend logic, UI/UX principles, and payment integration 💡.
-        </p>
-        <p class="about-text text-justify">
-          I am currently looking for an exciting <strong>internship opportunity</strong> to enhance my skills further and contribute meaningfully in a tech-driven environment. I’m always eager to explore, learn, and grow in the field of web development. 🌱
-        </p>
+  I am a <strong>Full Stack Web Developer</strong> currently pursuing my <strong>Master of Computer Applications (MCA)</strong>. I have built a strong technical foundation during my BCA and continue to enhance my skills by developing real-world web applications. I work with <strong>C, C++, PHP, Java, HTML5, CSS, JavaScript, jQuery, Bootstrap</strong>, and <strong>ASP.NET (C#)</strong>, and I focus on building clean, responsive, and scalable web solutions. 🚀
+</p>
 
+<p class="about-text text-justify">
+  In my BCA final year, I developed a complete <strong>Sport Club Management System</strong> using <strong>ASP.NET (C#)</strong> as my major project. This project gave me practical experience in backend development, database design, UI/UX, and payment integration. Along with this, I have developed <strong>5+ full-stack projects</strong> using <strong>PHP & MySQL</strong>, which strengthened my ability to build complete systems from scratch. 💡
+</p>
+
+<p class="about-text text-justify">
+  Currently, I am pursuing my <strong>MCA</strong> and working on improving my knowledge in advanced areas such as API development, backend optimization, and system design. I am actively looking for an <strong>internship opportunity</strong> where I can contribute, gain industry experience, and grow as a professional developer. I believe in learning by building and continuously improving myself through real-world development experience. 🌱
+</p>
         <!-- Achievements -->
         <div class="achievements-box mt-4">
           <h4 class="achievements-title">Key Achievements 🏆</h4>
@@ -325,7 +345,7 @@
          </div>
 
           <p class="duration" style="margin-top: 5px; color: white; font-weight: 500;">
-            <i class="far fa-calendar-alt"></i> 2024 – Pursuing
+            <i class="far fa-calendar-alt"></i> 2025 – Pursuing
           </p>
           <div class="cgpa-display">
             <div class="cgpa-text">
@@ -411,7 +431,113 @@
     <section id="skills" class="section-padding" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
             <h2 class="section-title"> 🎯 My Skills 💡🧠 </h2>
-            <div class="row">
+            <div class="skills-badge-wrap reveal-up">
+                <span class="badge bg-primary skills-specialization-badge">Full Stack Developer</span>
+            </div>
+            <p class="skills-summary-line text-center reveal-up">
+                I build full-stack web applications with strong backend logic and modern UI design.
+            </p>
+            <p class="skills-project-line text-center reveal-up">
+                Used PHP &amp; MySQL to build E-commerce and Study Portal systems.
+            </p>
+            <p class="skills-intro reveal-up">
+                Clean frontend, strong backend logic, and practical tools I use to build responsive full stack products.
+            </p>
+            <div class="skills-showcase row g-4">
+                <div class="col-lg-6">
+                    <div class="skills-category reveal-up">
+                        <div class="skills-category-header">
+                            <span class="skills-chip">Core Logic</span>
+                            <h3 class="skills-heading"><i class="fas fa-code"></i> Programming Languages</h3>
+                            <p>I write maintainable logic, backend workflows, and problem-solving code across multiple languages.</p>
+                        </div>
+                        <div class="skills-icon-grid">
+                            <div class="skill-badge" style="--skill-delay: 0s;"><i class="devicon-c-plain colored"></i><div class="skill-badge-content"><span>C</span><small>Logic Building, Problem Solving</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.08s;"><i class="devicon-cplusplus-plain colored"></i><div class="skill-badge-content"><span>C++</span><small>OOP, Data Structures</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.16s;"><i class="devicon-php-plain colored"></i><div class="skill-badge-content"><span>PHP</span><small>Backend APIs, Authentication</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.24s;"><i class="devicon-python-plain colored"></i><div class="skill-badge-content"><span>Python</span><small>Scripting, Core Programming</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.32s;"><i class="devicon-java-plain colored"></i><div class="skill-badge-content"><span>Java</span><small>OOP, Application Logic</small></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skills-category reveal-up">
+                        <div class="skills-category-header">
+                            <span class="skills-chip">Interface Craft</span>
+                            <h3 class="skills-heading"><i class="fas fa-globe"></i> Web Technologies</h3>
+                            <p>Modern UI building blocks for fast, responsive, and polished user experiences.</p>
+                        </div>
+                        <div class="skills-icon-grid">
+                            <div class="skill-badge" style="--skill-delay: 0s;"><i class="devicon-html5-plain colored"></i><div class="skill-badge-content"><span>HTML5</span><small>Semantic Layouts, Structure</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.08s;"><i class="devicon-css3-plain colored"></i><div class="skill-badge-content"><span>CSS3</span><small>Animations, Responsive Styling</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.16s;"><i class="devicon-javascript-plain colored"></i><div class="skill-badge-content"><span>JavaScript</span><small>DOM, AJAX, UI Logic</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.24s;"><i class="devicon-jquery-plain colored"></i><div class="skill-badge-content"><span>jQuery</span><small>DOM Effects, Form Handling</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.32s;"><i class="devicon-bootstrap-plain colored"></i><div class="skill-badge-content"><span>Bootstrap</span><small>Responsive Design, Layout System</small></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skills-category reveal-up">
+                        <div class="skills-category-header">
+                            <span class="skills-chip">Application Stack</span>
+                            <h3 class="skills-heading"><i class="fas fa-layer-group"></i> Frameworks</h3>
+                            <p>Reliable frameworks for admin panels, data workflows, and full stack application delivery.</p>
+                        </div>
+                        <div class="skills-icon-grid">
+                            <div class="skill-badge" style="--skill-delay: 0s;"><i class="devicon-dotnetcore-plain colored"></i><div class="skill-badge-content"><span>ASP.NET C#</span><small>Admin Panels, Backend Systems</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.08s;"><i class="devicon-dotnetcore-plain colored"></i><div class="skill-badge-content"><span>ASP.NET MVC</span><small>MVC Architecture, CRUD Workflows</small></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skills-category reveal-up">
+                        <div class="skills-category-header">
+                            <span class="skills-chip">Data Layer</span>
+                            <h3 class="skills-heading"><i class="fas fa-database"></i> Database</h3>
+                            <p>Structured databases that support admin dashboards, e-commerce flows, and secure records.</p>
+                        </div>
+                        <div class="skills-icon-grid">
+                            <div class="skill-badge" style="--skill-delay: 0s;"><i class="devicon-azuresqldatabase-plain colored"></i><div class="skill-badge-content"><span>SQL Server</span><small>Relational Data, Stored Queries</small></div></div>
+                            <div class="skill-badge" style="--skill-delay: 0.08s;"><i class="devicon-mysql-plain colored"></i><div class="skill-badge-content"><span>MySQL</span><small>E-commerce DB, Study Portal Data</small></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tools-technologies reveal-up">
+                <div class="tools-header">
+                    <h4>🛠️ Tools &amp; Technologies</h4>
+                    <p>Git &amp; GitHub (Version Control), VS Code (Development), Postman (API Testing), InfinityFree (Web Hosting)</p>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-pill"><i class="devicon-git-plain colored"></i><div class="tool-pill-content"><span>Git &amp; GitHub</span><small>Version Control</small></div></div>
+                    <div class="tool-pill"><i class="devicon-vscode-plain colored"></i><div class="tool-pill-content"><span>VS Code</span><small>Development</small></div></div>
+                    <div class="tool-pill"><i class="fas fa-paper-plane"></i><div class="tool-pill-content"><span>Postman</span><small>API Testing</small></div></div>
+                    <div class="tool-pill"><i class="fas fa-globe"></i><div class="tool-pill-content"><span>InfinityFree</span><small>Web Hosting of PHP Website</small></div></div>
+                </div>
+            </div>
+            <div class="tools-technologies integrations-panel reveal-up">
+                <div class="tools-header">
+                    <h4>💳 Integrations</h4>
+                    <p>Cashfree Payment Gateway, Email OTP (Brevo API)</p>
+                </div>
+                <div class="tools-grid integrations-grid">
+                    <div class="tool-pill integration-pill">
+                        <i class="fas fa-credit-card"></i>
+                        <div class="tool-pill-content">
+                            <span>Cashfree</span>
+                            <small>Payment Gateway</small>
+                        </div>
+                    </div>
+                    <div class="tool-pill integration-pill">
+                        <i class="fas fa-envelope-circle-check"></i>
+                        <div class="tool-pill-content">
+                            <span>Brevo API</span>
+                            <small>Email OTP Authentication</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row legacy-skills-row">
                 <div class="col-lg-6">
                     <div class="skills-category">
     <h3 class="skills-heading"><i class="fas fa-code"></i> Programming Languages</h3>
@@ -519,7 +645,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4">
+            <div class="row mt-4 legacy-skills-row">
                 <div class="col-lg-6">
                     <div class="skills-category">
                         <h3 class="skills-heading"><i class="fas fa-layer-group"></i> Frameworks</h3>
@@ -570,18 +696,95 @@
         </div>
     </section>
 
+<section id="learning" class="section-padding learning-section" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container">
+    <div class="learning-panel reveal-up">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="learning-kicker">Currently Learning</span>
+          <h2 class="section-title mb-4">Currently Learning</h2>
+          <p class="learning-copy">
+            I am currently pursuing my MCA and continuously improving my skills in web development. I am learning advanced concepts like API development, backend optimization, and system design. I am also exploring modern technologies to build more efficient and scalable applications.
+          </p>
+          <div class="learning-points">
+            <div class="learning-point reveal-up">
+              <i class="fas fa-server"></i>
+              <span>API development and backend optimization</span>
+            </div>
+            <div class="learning-point reveal-up">
+              <i class="fas fa-diagram-project"></i>
+              <span>System design and scalable application planning</span>
+            </div>
+            <div class="learning-point reveal-up">
+              <i class="fas fa-mobile-screen-button"></i>
+              <span>Responsive product thinking for mobile-first experiences</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="learning-stats">
+            <div class="learning-stat reveal-up">
+              <strong>MCA</strong>
+              <span>Pursuing advanced computer application studies with a practical project mindset.</span>
+            </div>
+            <div class="learning-stat reveal-up">
+              <strong>Modern Stack</strong>
+              <span>Sharpening real-world workflows around APIs, performance, and cleaner architecture.</span>
+            </div>
+            <div class="learning-stat reveal-up">
+              <strong>Daily Practice</strong>
+              <span>Improving through portfolio upgrades, production-style projects, and continuous learning.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Projects Section -->
 <section id="projects" class="section-padding" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
-        <h2 class="section-title text-center mb-5">👨‍💻 My Projects 🚀</h2>
-        <div class="row">
+        <div class="projects-header text-center mx-auto mb-5">
+            <h2 class="section-title text-center mb-3">👨‍💻 Projects Experience 🚀</h2>
+            <p class="projects-lead mb-0">Responsive, real-world web applications built with strong backend logic, clean interfaces, and production-style user flows.</p>
+        </div>
+        
+        <div class="projects-overview reveal-up">
+            <div class="project-overview-card">
+                <strong>6+ Projects</strong>
+                <span>Projects built across ASP.NET, PHP, APIs, and admin workflows.</span>
+            </div>
+            <div class="project-overview-card">
+                <strong>Mobile First</strong>
+                <span>Each project block now supports responsive filtering and smooth motion on smaller screens.</span>
+            </div>
+            <div class="project-overview-card">
+                <strong>UI Upgrade</strong>
+                <span>Portfolio now includes a top scroll progress bar and an animated project filter system.</span>
+            </div>
+        </div>
+        <div class="project-filter-bar reveal-up" role="group" aria-label="Filter projects">
+            <button class="project-filter-btn active" type="button" data-filter="all">All Projects</button>
+            <button class="project-filter-btn" type="button" data-filter="aspnet">ASP.NET</button>
+            <button class="project-filter-btn" type="button" data-filter="php">PHP</button>
+            <button class="project-filter-btn" type="button" data-filter="ecommerce">E-Commerce</button>
+            <button class="project-filter-btn" type="button" data-filter="academic">Academic</button>
+            <button class="project-filter-btn" type="button" data-filter="api">API</button>
+        </div>
+        <div class="row g-4 projects-grid">
             <!-- Project 1 - Sport Club -->
-            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                <div class="project-card shadow-sm">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 project-column" data-category="aspnet academic fullstack">
+                <div class="project-card shadow-sm project-reveal">
                     <div class="project-image">
+                        <span class="project-status">Featured Project</span>
                         <img src="images/sd.jpg" alt="Sport Club Management System" class="img-fluid rounded-top">
                     </div>
                     <div class="project-content p-3 text-justify">
+                        <div class="project-meta">
+                            <span>Final Year Build</span>
+                            <span>ASP.NET Platform</span>
+                        </div>
                         <h3 class="h4">Sport Club Management System</h3>
                        <div class="tech-stack mb-3 d-flex flex-wrap gap-1 justify-content-between">
 
@@ -629,12 +832,17 @@
             </div>
 
             <!-- Project 2 - Gym Management -->
-            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                <div class="project-card shadow-sm">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 project-column" data-category="aspnet fullstack">
+                <div class="project-card shadow-sm project-reveal">
                     <div class="project-image">
+                        <span class="project-status">Full Stack Build</span>
                         <img src="images/gym.jpg" alt="Gym Management System" class="img-fluid rounded-top">
                     </div>
                     <div class="project-content p-3">
+                        <div class="project-meta">
+                            <span>Admin Workflow</span>
+                            <span>Responsive System</span>
+                        </div>
                         <h3 class="h4">Gym Management System</h3>
                         <div class="tech-stack mb-3 d-flex flex-wrap gap-1 justify-content-between">
                             <span class="badge bg-primary">ASP.NET (C#)</span>
@@ -685,12 +893,17 @@
             </div>
 
             <!-- Project 3 - Gloomy E-Commerce -->
-            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                <div class="project-card shadow-sm">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 project-column" data-category="php ecommerce fullstack">
+                <div class="project-card shadow-sm project-reveal">
                     <div class="project-image">
+                        <span class="project-status">Live Project</span>
                         <img src="images/e.jpg" alt="Gloomy E-Commerce Website" class="img-fluid rounded-top">
                     </div>
                     <div class="project-content p-3">
+                        <div class="project-meta">
+                            <span>E-Commerce Flow</span>
+                            <span>Payment Ready</span>
+                        </div>
                         <h3 class="h4">Gloomy - E-Commerce Website</h3>
                         <div class="tech-stack mb-3 d-flex flex-wrap gap-1 justify-content-between">
                             <span class="badge bg-primary">PHP</span>
@@ -787,21 +1000,26 @@
                             <a href="https://github.com/YourGithub/Gloomy" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1 flex-md-grow-0">
                                   <i class="fab fa-github me-1"></i></i> View Code &nbsp;<i class="fas fa-code me-1 "></i>
                         </a>
-                            <a href="https://gloomy.wuaze.com" target="_blank" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0">
+                            <!-- <a href="https://gloomy.wuaze.com" target="_blank" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0">
                                 <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Project 4 - Smart Study Hub -->
-            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                <div class="project-card shadow-sm">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 project-column" data-category="php academic">
+                <div class="project-card shadow-sm project-reveal">
                     <div class="project-image">
+                        <span class="project-status">Student Platform</span>
                         <img src="images/sm.jpg" alt="Smart Study Hub" class="img-fluid rounded-top">
                     </div>
                     <div class="project-content p-3">
+                        <div class="project-meta">
+                            <span>Learning Portal</span>
+                            <span>Content Managed</span>
+                        </div>
                         <h3 class="h4">Smart Study Hub</h3>
                         <div class="tech-stack mb-3 d-flex flex-wrap gap-1 justify-content-between">
                             <span class="badge bg-primary">PHP</span>
@@ -881,21 +1099,26 @@
                             <a href="https://github.com/DevPatel-2208/Smart_Study_Hub-Project" class="btn btn-outline-primary btn-sm flex-grow-1 flex-md-grow-0">
                                      <i class="fab fa-github me-1"></i></i> View Code &nbsp;<i class="fas fa-code me-1 "></i>
                            </a>
-                            <a href="https://smartstudy-hub.wuaze.com" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
+                            <!-- <a href="https://smartstudy-hub.wuaze.com" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
                                 <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Project 5 - GroceryKart -->
-            <div class="col-12 col-md-6 col-lg-6 mb-4">
-                <div class="project-card shadow-sm">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 project-column" data-category="php ecommerce">
+                <div class="project-card shadow-sm project-reveal">
                     <div class="project-image">
+                        <span class="project-status">Commerce Demo</span>
                         <img src="images/gro.jpg" alt="GroceryKart Website" class="img-fluid rounded-top">
                     </div>
                     <div class="project-content p-3">
+                        <div class="project-meta">
+                            <span>Delivery Workflow</span>
+                            <span>Mobile First</span>
+                        </div>
                         <h3 class="h4">GroceryKart - Online Grocery Store</h3>
                         <div class="tech-stack mb-3 d-flex flex-wrap gap-1 justify-content-between">
                             <span class="badge bg-primary">PHP</span>
@@ -969,20 +1192,25 @@
                             <a href="#" class="btn btn-outline-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
                                     <i class="fab fa-github me-1"></i></i> View Code &nbsp;<i class="fas fa-code me-1 "></i>
                             </a>
-                            <a href="https://grocerykart.wuaze.com" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
+                            <!-- <a href="https://grocerykart.wuaze.com" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
                                 <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-6 mb-4">
-    <div class="project-card shadow-sm">
+            <div class="col-12 col-md-6 col-lg-6 mb-4 project-column" data-category="php api utility">
+    <div class="project-card shadow-sm project-reveal">
         <div class="project-image">
+            <span class="project-status">API Integration</span>
             <img src="images/ww.jpg" alt="Weather App Project" class="img-fluid rounded-top">
         </div>
         <div class="project-content p-3">
+            <div class="project-meta">
+                <span>Live Data App</span>
+                <span>Fast UI</span>
+            </div>
             <h3 class="h4">WeatherNow - Real-time Weather Info App</h3>
             <div class="tech-stack mb-3 d-flex flex-wrap gap-1 justify-content-between">
                 <span class="badge bg-primary">PHP</span>
@@ -1031,9 +1259,9 @@
                 <a href="https://github.com/DevPatel-2208/wheather_api-Project.git" class="btn btn-outline-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
                     <i class="fab fa-github me-1"></i> View Code &nbsp;<i class="fas fa-code me-1"></i>
                 </a>
-                <a href="https://weathernow.wuaze.com" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
+                <!-- <a href="https://weathernow.wuaze.com" class="btn btn-primary btn-sm flex-grow-1 flex-md-grow-0" target="_blank">
                     <i class="fas fa-external-link-alt me-1"></i> Live Demo
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -1042,216 +1270,155 @@
         </div>
     </div>
 </section>
-
-<style>
-    /* Custom CSS for enhanced mobile responsiveness */
-    .project-card {
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .project-image {
-        overflow: hidden;
-        height: 200px;
-    }
-    
-    .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-    
-    .project-card:hover .project-image img {
-        transform: scale(1.05);
-    }
-    
-    .project-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .tech-stack .badge {
-        font-size: 0.7rem;
-        font-weight: 500;
-        margin-right: 0;
-    }
-    
-    .features-list {
-        list-style-type: none;
-        padding-left: 0;
-    }
-    
-    .features-list li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .features-list li i {
-        position: absolute;
-        left: 0;
-        top: 0.2rem;
-    }
-    
-    .project-links {
-        margin-top: auto;
-        padding-top: 1rem;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 767.98px) {
-        .project-image {
-            height: 180px;
-        }
-        
-        .project-content h3 {
-            font-size: 1.25rem;
-        }
-        
-        .project-content p {
-            font-size: 0.9rem;
-        }
-        
-        .features-list li {
-            font-size: 0.85rem;
-        }
-        
-        .project-links .btn {
-            width: 100%;
-        }
-    }
-    
-    @media (max-width: 575.98px) {
-        .project-image {
-            height: 160px;
-        }
-        
-        .tech-stack .badge {
-            font-size: 0.65rem;
-        }
-    }
-</style>
 <!-- Certificates Section -->
 <section id="certificates" class="section-padding" data-aos="fade-up" data-aos-duration="1000">
   <div class="container">
-    <h2 class="section-title text-center mb-5"> 📜 My Certificates  </h2>
+
+    <h2 class="section-title text-center mb-3">📜 My Certificates</h2>
+
+    <!-- 🔥 Summary Line -->
+    <p class="text-center mb-5">
+      These certifications reflect my continuous learning in web development and professional skills.
+    </p>
+
     <div class="row g-4">
 
       <!-- IBM Certificate -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
+
+            <!-- 🔥 Tags -->
+            <span class="badge bg-info mb-2">Frontend</span>
+            <span class="badge bg-success mb-2">UI/UX</span>
+
             <h5 class="card-title">Web Development Fundamentals</h5>
-            <p class="card-text"><strong>Issued by:</strong> IBM SkillsBuild</p>
-            <p class="card-text"><strong>Date:</strong> May 24, 2025</p>
-            <p class="card-text text-justify">Learned HTML, CSS, GitHub, and key frontend principles using IBM Design Thinking.</p>
+            <p><strong>Issued by:</strong> IBM SkillsBuild</p>
+            <p><strong>Date:</strong> May 24, 2025</p>
+
+            <p class="text-justify">
+              Learned HTML, CSS, GitHub, and frontend development principles using design thinking approach.
+            </p>
+
+            <!-- 🔥 Skills Gained -->
+            <p><strong>Skills Gained:</strong> HTML, CSS, Responsive Design, GitHub, UI/UX</p>
+
             <ul>
-  ✅ Bootstrap Layout & Grids<br/>
-  ✅ Responsive Web Design<br/>
-  ✅ GitHub Deployment<br/>
-  ✅ UI/UX Fundamentals<br/>
-  ✅ Project Collaboration
-</ul>
-            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ibmModal">📄 View Certificate</button>
+              <li>Bootstrap Layout & Grids</li>
+              <li>Responsive Web Design</li>
+              <li>GitHub Deployment</li>
+              <li>UI/UX Fundamentals</li>
+              <li>Project Collaboration</li>
+            </ul>
+
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ibmModal">
+              🔍 Verify Credential
+            </button>
+
           </div>
         </div>
       </div>
 
-      <!-- TCS Certificate -->
+      <!-- Bootstrap Certificate -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h5 class="card-title">Career Edge - Young Professional</h5>
-            <p class="card-text"><strong>Issued by:</strong> TCS iON</p>
-            <p class="card-text"><strong>Date:</strong> Jan 13, 2025</p>
-            <p class="card-text text-justify">Covered resume writing, email etiquette, AI overview, and soft skills.</p>
-            <ul>
-  ✅ Professional Communication<br/>
-  ✅ Resume Building Skills<br/>
-  ✅ Mock Interviews & Assessments<br/>
-  ✅ AI Overview<br/>
-  ✅ LinkedIn & Personal Branding<br/>
-</ul>
 
-            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tcsModal">📄 View Certificate</button>
+            <span class="badge bg-info mb-2">Frontend</span>
+
+            <h5 class="card-title">Bootstrap Development</h5>
+            <p><strong>Issued by:</strong> Infosys (Springboard)</p>
+            <p><strong>Date:</strong> Feb 2025</p>
+
+            <p class="text-justify">
+              Learned responsive UI design, grid systems, and reusable components using Bootstrap 5.
+            </p>
+
+            <p><strong>Skills Gained:</strong> Bootstrap, Responsive Design, UI Components</p>
+
+            <ul>
+              <li>Bootstrap Layout & Grids</li>
+              <li>Bootstrap Components</li>
+              <li>Bootstrap Utilities</li>
+              <li>Responsive Web Design</li>
+              <li>Custom UI Components</li>
+            </ul>
+
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#certModal1">
+              🔍 Verify Credential
+            </button>
+
           </div>
         </div>
       </div>
 
-     <!-- Certificate 1: Bootstrap Development -->
-<div class="col-md-6 col-lg-4 mb-4">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body">
-      <h5 class="card-title">Bootstrap Development</h5>
-      <p class="card-text"><strong>Issued by:</strong> Infosys(Springboard)</p>
-      <p class="card-text"><strong>Date:</strong> Feb 2025</p>
-      <p class="card-text text-justify">Learned grid systems, custom UI components & responsive design using Bootstrap 5.</p>
-       <ul>
-              ✅Bootstrap Layout & Grids<br/>
-              ✅Bootstrap Components<br/>
-              ✅Bootstrap Utilities<br/>
+      <!-- Website Development -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
 
+            <span class="badge bg-info mb-2">Frontend</span>
+            <span class="badge bg-secondary mb-2">Hosting</span>
 
-              ✅Responsive Web Design<br/>
-             ✅Custom UI Components<br/>
+            <h5 class="card-title">Website Development Tutorial</h5>
+            <p><strong>Issued by:</strong> Infosys (Springboard)</p>
+            <p><strong>Date:</strong> Jan 2025</p>
+
+            <p class="text-justify">
+              Covered fundamentals of web development including HTML, CSS, JavaScript, and hosting.
+            </p>
+
+            <p><strong>Skills Gained:</strong> HTML, CSS, JavaScript, Hosting</p>
+
+            <ul>
+              <li>HTML, CSS, JS Basics</li>
+              <li>Hosting & Deployment</li>
+              <li>Responsive Web Design</li>
+              <li>UI/UX Fundamentals</li>
+              <li>Static Website Projects</li>
             </ul>
-      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#certModal1">📄 View Certificate</button>
-    </div>
-  </div>
-</div>
 
-<!-- Certificate 2: Website Development -->
-<div class="col-md-6 col-lg-4 mb-4">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body">
-      <h5 class="card-title">Website Development Tutorial</h5>
-      <p class="card-text"><strong>Issued by:</strong>  Infosys(Springboard)</p>
-      <p class="card-text"><strong>Date:</strong> Jan 2025</p>
-      <p class="card-text text-justify">Covers HTML, CSS, JS basics, hosting & static web projects.</p>
-      <ul>
-              ✅HTML, CSS, JS basics<br/>
-              ✅Hosting & Deployment<br/>
-              ✅Responsive Web Design<br/>
-              ✅UI/UX Fundamentals<br/>
-            ✅Static Website Projects<br/>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#certModal2">
+              🔍 Verify Credential
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TCS iON -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+
+            <span class="badge bg-warning mb-2 text-dark">Soft Skills</span>
+            <span class="badge bg-info mb-2">IT Basics</span>
+
+            <h5 class="card-title">TCS iON Career Edge - IT for Non-IT</h5>
+            <p><strong>Issued by:</strong> TCS iON</p>
+            <p><strong>Date:</strong> March 2025</p>
+
+            <p class="text-justify">
+              Learned industry trends, IT fundamentals, and career development skills.
+            </p>
+
+            <p><strong>Skills Gained:</strong> IT Awareness, Cloud Basics, Career Skills</p>
+
+            <ul>
+              <li>Industry Overview</li>
+              <li>IT Awareness</li>
+              <li>Cloud Basics</li>
+              <li>Trending Tech (AI, Cloud)</li>
+              <li>Job Tools & Growth Path</li>
             </ul>
-      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#certModal2">📄 View Certificate</button>
-    </div>
-  </div>
-</div>
 
-<!-- Certificate 3: TCS iON Career Edge -->
-<div class="col-md-6 col-lg-4 mb-4">
-  <div class="card h-100 shadow-sm">
-    <div class="card-body">
-      <h5 class="card-title" style="color: black;">TCS iON Career Edge - IT for Non-IT</h5>
-      <p class="card-text"><strong>Issued by:</strong> TCS iON</p>
-      <p class="card-text"><strong>Date:</strong> March 2025</p>
-      <p class="card-text text-justify">Covered trending tech, AI, cloud basics, job tools, and IT awareness.</p>
-       <ul>
-            ✅Industry Overview<br/>
-            ✅IT Awareness<br/>
-            ✅Cloud Basics<br/>
-            ✅Trending Tech (AI, Cloud)<br/>
-            ✅Job Tools & Growth Path<br/>
-            </ul>
-      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#certModal3">📄 View Certificate</button>
-    </div>
-  </div>
-</div>
+            <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#certModal3">
+              🔍 Verify Credential
+            </button>
 
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -1259,101 +1426,166 @@
 
 <section id="achievements-gallery" class="section-padding" data-aos="fade-up" data-aos-duration="1000">
   <div class="container">
-    <h2 class="section-title text-center mb-5">🏆 My BCA Achievements Gallery ✨</h2>
-    <!-- Overall BCA -->
-    <h5 class="bg-success text-white p-2 rounded mb-3">🎓 BCA Overall — CGPA: 9.62 ✨| University Rank: 6 | College Rank: 5 ✨</h5>
-    <div class="row g-3">
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/sem1.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-1 Result ✨</div>
+
+    <!-- Title -->
+    <h2 class="section-title text-center mb-3">🏆 BCA Journey & Achievements ✨</h2>
+
+    <!-- Summary -->
+    <div class="achievements-hero reveal-up">
+      <p class="achievements-subtitle">
+        A consistent academic journey from Semester 1 to Semester 6 with strong performance and achievements.
+      </p>
+
+    <!-- Highlight -->
+      <div class="achievements-summary">
+        <div class="achievement-stat">
+          <span class="achievement-stat-label">CGPA</span>
+          <strong>9.62</strong>
         </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/sem2.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-2 Result ✨</div>
+        <div class="achievement-stat">
+          <span class="achievement-stat-label">University Rank</span>
+          <strong>6</strong>
         </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/sem3.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-3 Result ✨</div>
+        <div class="achievement-stat">
+          <span class="achievement-stat-label">College Rank</span>
+          <strong>5</strong>
         </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/c2.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-3  ✨</div>
-        </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/rp.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄 Sem-3 Result Trophy Achiever ✨</div>
-        </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/sem4.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-4 Result ✨</div>
-        </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/5.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">🥇Rank 1 |📄✨ Sem-5 Result</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/sem5.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">🥇Rank 1 | Sem-5 Trophy Awarded 🏆</div>
-        </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/c5.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-5 ✨</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/sem-5.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-5 Result✨</div>
-        </div>
-      </div>
-       <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/aoall.jpeg" class="img-fluid rounded shadow-sm" alt="Overall Result" onclick="openModal(this)">
-          <div class="gallery-caption">📄🎓 Sem-6 Result ✨</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/aodev.jpeg" class="img-fluid rounded shadow-sm" alt="Final Trophy" onclick="openModal(this)">
-          <div class="gallery-caption">🎓✨All Overall Rank✨</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/lib.jpeg" class="img-fluid rounded shadow-sm" alt="With Teachers" onclick="openModal(this)">
-          <div class="gallery-caption">🏆📚 E-Library Achiever 🏆</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/work.jpeg" class="img-fluid rounded shadow-sm" alt="With Teachers" onclick="openModal(this)">
-          <div class="gallery-caption">📚 PHP Workshop - API Integration</div>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="gallery-item">
-          <img src="images/php.jpeg" class="img-fluid rounded shadow-sm" alt="With Teachers" onclick="openModal(this)">
-          <div class="gallery-caption">📚 PHP Workshop - API Integration </div>
-        </div>
+        🎓 CGPA: 9.62 • University Rank: 6 • College Rank: 5
       </div>
     </div>
+
+    <!-- ✅ SINGLE GRID (NO SPACE ISSUE) -->
+    <div class="row g-4 justify-content-center achievements-grid">
+
+      <!-- Sem 1 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/sem1.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 1</span>
+          <div class="gallery-caption">Strong Start</div>
+        </div>
+      </div>
+
+      <!-- Sem 2 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/sem2.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 2</span>
+          <div class="gallery-caption">Improved Performance</div>
+        </div>
+      </div>
+
+      <!-- Sem 3 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/sem3.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 3</span>
+          <div class="gallery-caption">Top Rank</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/c2.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 3</span>
+          <div class="gallery-caption">Certificate</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/rp.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 3</span>
+          <div class="gallery-caption">Trophy</div>
+        </div>
+      </div>
+
+      <!-- Sem 4 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/sem4.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 4</span>
+          <div class="gallery-caption">Consistent</div>
+        </div>
+      </div>
+
+      <!-- Sem 5 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/5.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 5</span>
+          <div class="gallery-caption">🥇 Rank 1</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/sem5.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 5</span>
+          <div class="gallery-caption">🏆 Trophy</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/c5.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 5</span>
+          <div class="gallery-caption">Certificate</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/sem-5.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 5</span>
+          <div class="gallery-caption">Result</div>
+        </div>
+      </div>
+
+      <!-- Sem 6 -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/aoall.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 6</span>
+          <div class="gallery-caption">Final Result</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/aodev.jpeg" onclick="openModal(this)">
+          <span class="sem-badge">Sem 6</span>
+          <div class="gallery-caption">Overall Rank</div>
+        </div>
+      </div>
+
+      <!-- Extra -->
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/lib.jpeg" onclick="openModal(this)">
+          <span class="sem-badge bg-success">Extra</span>
+          <div class="gallery-caption">E-Library</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/work.jpeg" onclick="openModal(this)">
+          <span class="sem-badge bg-success">Extra</span>
+          <div class="gallery-caption">Workshop</div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item">
+          <img src="images/php.jpeg" onclick="openModal(this)">
+          <span class="sem-badge bg-success">Extra</span>
+          <div class="gallery-caption">Certificate</div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
@@ -1404,7 +1636,7 @@
           </div>
         </div>
       </div>
-
+<br/><br/><br/><br/>
       <!-- Contact Form Right -->
       <div class="col-lg-6">
   <div class="card shadow p-4">
@@ -1723,8 +1955,67 @@
 </script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    const root = document.documentElement;
+    const body = document.body;
+    const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-link');
     const navbarCollapse = document.querySelector('.navbar-collapse');
+    const projectCards = document.querySelectorAll('.project-reveal');
+    const revealItems = document.querySelectorAll('.reveal-up, .skills-category');
+    const projectColumns = document.querySelectorAll('.project-column');
+    const projectFilterButtons = document.querySelectorAll('.project-filter-btn');
+    const themeToggle = document.getElementById('theme-toggle');
+    const scrollProgressBar = document.getElementById('scroll-progress-bar');
+
+    function updateThemeToggle(isLightTheme) {
+      if (!themeToggle) return;
+      themeToggle.setAttribute('aria-pressed', String(isLightTheme));
+      themeToggle.setAttribute('aria-label', isLightTheme ? 'Switch to dark mode' : 'Switch to light mode');
+    }
+
+    function applyTheme(theme) {
+      const isLightTheme = theme === 'light';
+      body.classList.toggle('light-theme', isLightTheme);
+      root.classList.toggle('light-theme', isLightTheme);
+      updateThemeToggle(isLightTheme);
+    }
+
+    let savedTheme = 'dark';
+    try {
+      savedTheme = localStorage.getItem('portfolio-theme') || (root.classList.contains('light-theme') ? 'light' : 'dark');
+    } catch (error) {
+      savedTheme = root.classList.contains('light-theme') ? 'light' : 'dark';
+    }
+
+    applyTheme(savedTheme);
+
+    function syncNavbarState() {
+      if (!navbar) return;
+      navbar.classList.toggle('navbar-scrolled', window.scrollY > 18);
+    }
+
+    function syncScrollProgress() {
+      if (!scrollProgressBar) return;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgressBar.style.width = `${Math.min(progress, 100)}%`;
+    }
+
+    syncNavbarState();
+    syncScrollProgress();
+    window.addEventListener('scroll', syncNavbarState, { passive: true });
+    window.addEventListener('scroll', syncScrollProgress, { passive: true });
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function () {
+        const nextTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+        applyTheme(nextTheme);
+        try {
+          localStorage.setItem('portfolio-theme', nextTheme);
+        } catch (error) {}
+      });
+    }
 
     navLinks.forEach(function(link) {
       link.addEventListener('click', function () {
@@ -1733,6 +2024,54 @@
         }
       });
     });
+
+    if (projectFilterButtons.length) {
+      projectFilterButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+          const filter = button.dataset.filter;
+
+          projectFilterButtons.forEach((item) => item.classList.toggle('active', item === button));
+
+          projectColumns.forEach((column) => {
+            const category = column.dataset.category || '';
+            const shouldShow = filter === 'all' || category.includes(filter);
+            column.classList.toggle('is-filter-hidden', !shouldShow);
+          });
+        });
+      });
+    }
+
+    if (projectCards.length && 'IntersectionObserver' in window && window.matchMedia('(min-width: 769px)').matches) {
+      const projectObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const card = entry.target;
+          const cardIndex = Array.from(projectCards).indexOf(card);
+          card.style.transitionDelay = `${Math.min(cardIndex * 120, 420)}ms`;
+          card.classList.add('is-visible');
+          observer.unobserve(card);
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+
+      projectCards.forEach((card) => projectObserver.observe(card));
+    } else {
+      projectCards.forEach((card) => card.classList.add('is-visible'));
+    }
+
+    if (revealItems.length && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    }
   });
 </script>
 <!-- Before </body> -->
@@ -1742,7 +2081,8 @@
 <script>
   // Initialize Typed.js for Name
   var typedName = new Typed('.typed-name', {
-    strings: ["Hi👋, I'm <span style='color: #3b82f6;'>Dev Patel</span> 👨‍💻"],
+    strings: [
+  "Hii<span class='emoji'>👋</span>, I'm <span class='name'>Dev Patel</span> <span class='emoji'>👨‍💻</span>"],
     typeSpeed: 60,
     showCursor: false,
     loop: false
@@ -1753,13 +2093,13 @@
     startDelay: 1500, // Waits for name to finish typing
     strings: [
       "Full Stack Developer 🚀", 
-      "PHP & MySQL Expert 🐘", 
-      ".NET & C# Specialist 🧬", 
-      "Bootstrap UI Designer 🎨",
+      "PHP & MySQL 🐘", 
+      ".NET & C# 🧬", 
+      "Bootstrap UI 🎨",
       "Full Stack Developer | PHP | .NET | C# | MySQL | Bootstrap"
     ],
-    typeSpeed: 50,
-    backSpeed: 30,
+    typeSpeed: 30,
+    backSpeed: 100,
     backDelay: 2000,
     loop: false,
     showCursor: true,
