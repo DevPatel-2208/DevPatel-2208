@@ -17,14 +17,20 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="Style.css">
     <script>
-      (function () {
-        try {
-          var savedTheme = localStorage.getItem('portfolio-theme');
-          if (savedTheme === 'light') {
-            document.documentElement.classList.add('light-theme');
-          }
-        } catch (error) {}
-      })();
+       (function () {
+    try {
+      var savedTheme = localStorage.getItem('portfolio-theme');
+
+      // FIRST TIME → default LIGHT
+      if (!savedTheme) {
+        document.documentElement.classList.add('light-theme');
+        localStorage.setItem('portfolio-theme', 'light');
+      } 
+      else if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    } catch (error) {}
+  })();
     </script>
     
 </head>
